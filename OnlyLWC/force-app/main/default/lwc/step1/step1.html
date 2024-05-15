@@ -1,0 +1,43 @@
+<template>
+    <lightning-card class="slds-m-around_medium">
+        <div class="slds-card__header slds-grid slds-align-spread">
+            <div class="slds-media">
+                <div class="slds-media__figure">
+                    <lightning-icon icon-name="standard:user" size="small" alternative-text="Personal Information"></lightning-icon>
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-text-heading_small">Step 1: Personal Information</h2>
+                </div>
+            </div>
+        </div>
+        <div class="slds-form slds-form_stacked">
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <lightning-input type="text" label="First Name" value={firstName} onchange={handleInputChange} data-id="firstName" required></lightning-input>
+                </div>
+            </div>
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <lightning-input type="text" label="Last Name" value={lastName} onchange={handleInputChange} data-id="lastName" required></lightning-input>
+                </div>
+            </div>
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <lightning-input type="date" label="Date of Birth" value={dateOfBirth} onchange={handleInputChange} data-id="dateOfBirth" required></lightning-input>
+                </div>
+            </div>
+            <div class="slds-m-top_medium">
+                <div if:true={isInvalid} class="slds-text-color_error slds-text-body_small">
+                    {errorMessages}
+                </div>
+            </div>
+        </div>
+        <div class="slds-m-around_medium">
+            <div class="slds-grid slds-grid_align-end">
+                <div class="slds-col">
+                    <button onclick={handleNext} class="slds-button slds-button_brand">Next</button>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

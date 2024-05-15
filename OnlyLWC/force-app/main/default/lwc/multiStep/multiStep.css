@@ -1,0 +1,41 @@
+/* Styles pour l'en-tête et le titre */
+.custom-header {
+    padding-bottom: 0;
+    padding-left: 10px; /* Ajout de padding à gauche pour décaler le titre */
+}
+
+.custom-title {
+    font-size: 1rem; /* Taille du texte légèrement augmentée */
+    font-weight: bold;
+    margin-bottom: 1rem; /* Réduction de l'espace en dessous */
+}
+
+/* Styles pour l'indicateur de progression 
+.slds-progress-bar.slds-progress-bar_path {
+    margin-top: 1rem; /* Espace ajouté sous le titre 
+}
+
+.slds-progress-bar__list {
+    display: flex;
+}
+
+.slds-progress-bar__item {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.slds-progress-bar__marker {
+    padding: 0;
+    color: #fff; /* Couleur du texte sur l'étape 
+    background-color: #0070d2; /* Couleur de fond par défaut 
+}
+
+.slds-progress-bar__item.slds-is-active .slds-progress-bar__marker {
+    background-color: #00a1e0; /* Couleur du marqueur de l'étape active 
+}
+*/
+/* Styles pour le bouton personnalisé */
+.custom-button {
+    background-color: #0070d2; /* Arrière-plan bleu */
+    color: white; /* Texte blanc */
+}

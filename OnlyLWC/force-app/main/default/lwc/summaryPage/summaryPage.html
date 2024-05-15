@@ -1,0 +1,50 @@
+<template>
+    <lightning-card class="slds-m-around_medium">
+        <div class="slds-card__header slds-grid slds-align-spread">
+            <div class="slds-media">
+                <div class="slds-media__figure">
+                    <lightning-icon icon-name="standard:approval" size="small" alternative-text="Review Information"></lightning-icon>
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-text-heading_small">Step 3: Review Information</h2>
+                </div>
+            </div>
+        </div>
+        <div class="slds-form slds-form_stacked">
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <p><strong>First Name:</strong> {firstName}</p>
+                </div>
+            </div>
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <p><strong>Last Name:</strong> {lastName}</p>
+                </div>
+            </div>
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <p><strong>Date of Birth:</strong> {dateOfBirth}</p>
+                </div>
+            </div>
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <p><strong>Country:</strong> {country}</p>
+                </div>
+            </div>
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <p><strong>Phone Number:</strong> {phoneNumber}</p>
+                </div>
+            </div>
+            <div class="slds-m-around_medium">
+                <div class="slds-grid slds-grid_align-end">
+                    <div class="slds-col">
+                        <button onclick={handlePrevious} class="slds-button slds-button_neutral">Previous</button>
+                        <button onclick={handleSubmit} class="slds-button slds-button_brand">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>
+

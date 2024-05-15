@@ -1,7 +1,10 @@
+
+
 /* Styles pour l'en-tête et le titre */
 .custom-header {
     padding-bottom: 0;
-    padding-left: 10px; /* Ajout de padding à gauche pour décaler le titre */
+    padding-left: 14px; /* Ajout de padding à gauche pour décaler le titre */
+    margin-top: -1rem; /* Réduction de l'espace au-dessus du titre */
 }
 
 .custom-title {
@@ -9,6 +12,12 @@
     font-weight: bold;
     margin-bottom: 1rem; /* Réduction de l'espace en dessous */
 }
+
+/* Styles pour l'indicateur de progression */
+.custom-progress-indicator {
+    margin-bottom: -1rem; /* Réduction de l'espace en dessous de l'indicateur */
+}
+
 /* Styles pour le bouton personnalisé */
 .custom-button {
     background-color: #0070d2; /* Arrière-plan bleu */

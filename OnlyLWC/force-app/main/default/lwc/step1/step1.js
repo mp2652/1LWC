@@ -10,7 +10,6 @@ export default class step1 extends LightningElement {
     handleInputChange(event) {
         const field = event.target.dataset.id;
         this[field] = event.target.value;
-        this.validateFields();
     }
 
     validateFields() {

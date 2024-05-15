@@ -4,7 +4,7 @@
 .custom-header {
     padding-bottom: 0;
     padding-left: 14px; /* Ajout de padding à gauche pour décaler le titre */
-    margin-top: -1rem; /* Réduction de l'espace au-dessus du titre */
+    margin-top: -0.9rem; /* Réduction de l'espace au-dessus du titre */
 }
 
 .custom-title {
@@ -22,4 +22,10 @@
 .custom-button {
     background-color: #0070d2; /* Arrière-plan bleu */
     color: white; /* Texte blanc */
+}
+
+
+/* Styles pour les étapes */
+.steps-container {
+    margin-top: -1rem; /* Réduction de l'espace au-dessus des templates */
 }

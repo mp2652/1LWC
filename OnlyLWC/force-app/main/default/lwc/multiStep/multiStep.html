@@ -2,44 +2,41 @@
     <lightning-card class="slds-m-around_none"> 
         <div class="custom-header">
             <h1 class="custom-title">Create New Contact</h1>
-            <lightning-progress-indicator type="path" current-step={selectedStep}>
-
-                <lightning-progress-step label="Step 1" value="Step1" onclick={selectStep1}>
-                </lightning-progress-step>
-                <lightning-progress-step label="Step 2" value="Step2" onclick={selectStep1}>
-                </lightning-progress-step>
-                <lightning-progress-step label="Step 3" value="Step3" onclick={selectStep1}>
-                </lightning-progress-step>
-        
+            <lightning-progress-indicator type="path" current-step={selectedStep} class="custom-progress-indicator">
+                <lightning-progress-step label="Step 1" value="Step1" onclick={selectStep1}></lightning-progress-step>
+                <lightning-progress-step label="Step 2" value="Step2" onclick={selectStep2}></lightning-progress-step>
+                <lightning-progress-step label="Step 3" value="Step3" onclick={selectStep3}></lightning-progress-step>
             </lightning-progress-indicator>
         </div>
-        <template if:true={isStep1}>
-            <c-step1
-                first-name={firstName}
-                last-name={lastName}
-                date-of-birth={dateOfBirth}
-                onstepcomplete={handleStep1Complete}
-            ></c-step1>
-        </template>
-        <template if:true={isStep2}>
-            <c-step2
-                country={country}
-                phone-number={phoneNumber}
-                onstepprevious={handleStep2Previous}
-                onstepcomplete={handleStep2Complete}
-            ></c-step2>
-        </template>
-        <template if:true={isReview}>
-            <c-summary-page
-                first-name={firstName}
-                last-name={lastName}
-                date-of-birth={dateOfBirth}
-                country={country}
-                phone-number={phoneNumber}
-                onstepprevious={handleReviewPrevious}
-                onstepcomplete={handleReviewComplete}
-                onfinish={handleFinish}
-            ></c-summary-page>
-        </template>
+        <div class="steps-container">
+            <template if:true={isStep1}>
+                <c-step1
+                    first-name={firstName}
+                    last-name={lastName}
+                    date-of-birth={dateOfBirth}
+                    onstepcomplete={handleStep1Complete}
+                ></c-step1>
+            </template>
+            <template if:true={isStep2}>
+                <c-step2
+                    country={country}
+                    phone-number={phoneNumber}
+                    onstepprevious={handleStep2Previous}
+                    onstepcomplete={handleStep2Complete}
+                ></c-step2>
+            </template>
+            <template if:true={isReview}>
+                <c-summary-page
+                    first-name={firstName}
+                    last-name={lastName}
+                    date-of-birth={dateOfBirth}
+                    country={country}
+                    phone-number={phoneNumber}
+                    onstepprevious={handleReviewPrevious}
+                    onstepcomplete={handleReviewComplete}
+                    onfinish={handleFinish}
+                ></c-summary-page>
+            </template>
+        </div>
     </lightning-card>
 </template>
